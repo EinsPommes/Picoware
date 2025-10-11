@@ -12,6 +12,7 @@
 #include "../../../applications/games/furiousbirds/furiousbirds.hpp"
 #include "../../../applications/games/labyrinth/labyrinth.hpp"
 #include "../../../applications/games/pong/pong.hpp"
+#include "../../../applications/games/snake/snake.hpp"
 #include "../../../applications/games/spaceinvaders/spaceinvaders.hpp"
 #include "../../../applications/games/tetris/tetris.hpp"
 #include "../../../applications/games/trexrunner/trexrunner.hpp"
@@ -59,6 +60,10 @@ static void gamesSwitchToView(ViewManager *viewManager)
         {
             viewManager->add(&pongView);
         }
+        else if (strcmp(currentItem, "Snake") == 0)
+        {
+            viewManager->add(&snakeView);
+        }
         else if (strcmp(currentItem, "Space Invaders") == 0)
         {
             viewManager->add(&spaceInvadersView);
@@ -103,6 +108,7 @@ static bool gamesStart(ViewManager *viewManager)
     // games->addItem("Furious Birds");
     games->addItem("Labyrinth");
     games->addItem("Pong");
+    games->addItem("Snake");
     games->addItem("Space Invaders");
     games->addItem("Tetris");
     // games->addItem("T-Rex Runner");
